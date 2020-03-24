@@ -32,7 +32,6 @@ public class TestSelenium {
             for (int j = 0; j < currentRow.getPhysicalNumberOfCells(); j++) {
                 Cell currentCell = currentRow.getCell(j);
                 System.out.print(currentCell.getStringCellValue() + "\t" + "\n");
-
                 obj.search(currentCell.getStringCellValue());
                 Thread.sleep(3000);
             }
@@ -40,7 +39,7 @@ public class TestSelenium {
     }
 
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "D:\\Shiz\\Programming\\selenium-java-3.141.59\\ChromeDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:\\Shiz\\Programming\\Selenium-Test\\ChromeDriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com/");
         driver.manage().deleteAllCookies();
