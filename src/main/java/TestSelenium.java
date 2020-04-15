@@ -39,7 +39,11 @@ public class TestSelenium {
     }
 
     public void openBrowser() {
-        System.setProperty("webdriver.chrome.driver", "D:\\Shiz\\Programming\\Selenium-Test\\ChromeDriver\\chromedriver.exe");
+
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/drivers/chromedriver.exe");
+
+//        System.setProperty("webdriver.chrome.driver", System.getProperty("D:\\Shiz\\Programming\\Selenium-Test\\ChromeDriver\\chromedriver.exe"));
+//        System.setProperty("webdriver.chrome.driver", "D:\\Shiz\\Programming\\Selenium-Test\\ChromeDriver\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com/");
         driver.manage().deleteAllCookies();
